@@ -1,0 +1,39 @@
+<header>
+  <h1>URL Shortner Tutorial</h1>
+  <br>
+  <a href="/add"><b>Add New Link</b></a></p>
+</header>
+
+
+<section>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Short</th>
+        <th>Long</th>
+        <th></th>
+      </tr>
+    </thead>
+    {{#each data }}
+    <tr>
+      <td> {{this.name}} </td>
+      <td> {{this.short}} </td>
+      <td> {{this.long}} </td>
+      <td><a href="/delete/{{@index}}">Delete</a></td>
+    </tr>
+    {{/each}}
+    {{!-- <tr>
+      <td>Row 1</td>
+      <td>Cell A1</td>
+      <td>Cell B1</td>
+      <td>Cell C1</td>
+    </tr>
+    <tr>
+      <td>Row 2</td>
+      <td>Cell A2</td>
+      <td>Cell B2</td>
+      <td>Cell C2</td>
+    </tr> --}}
+  </table>
+</section>

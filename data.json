@@ -1,0 +1,12 @@
+[
+  {
+    "short": "test",
+    "long": "https://google.com",
+    "name": "Test Link"
+  },
+  {
+    "short": "a",
+    "long": "https://www.dplyr.dev",
+    "name": "a"
+  }
+]

@@ -1,0 +1,32 @@
+<section>
+  <form action="/add" method="POST">
+    <header>
+      <h2>Add New Link</h2>
+    </header>
+    <label for="input1">URL Name:</label>
+    <input type="text" id="name" name="name" size="20" placeholder="Name" required>
+    <label for="input1">Short:</label>
+    <input type="text" id="short" name="short" size="20" placeholder="short" required> - <a
+      onclick="generate()">Generate Random Short</a>
+    <label for="input1">Long:</label>
+    <input type="url" id="long" name="long" size="20" placeholder="long" required>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<script>
+  function generate() {
+    var input = document.getElementById('short')
+    input.value = makeid(6)
+  }
+  function makeid(length) {
+    var result = '';
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+  }
+
+</script>
